@@ -1,0 +1,36 @@
+### GET home endpoint
+GET http://localhost:8080/
+
+### Get all movies
+GET http://localhost:8080/movies
+
+### Insert a movie
+PUT http://localhost:8080/admin/movies/0
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "The Matrix",
+    "release_date": "2021-02-18T21:54:42.123Z",
+    "runtime": 136,
+    "rating": "8",
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "genres_array": [1]
+}
+
+### Update movie
+PATCH http://localhost:8080/admin/movies/0
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 4,
+    "title": "The Matrix - Updated",
+    "runtime": 140
+}
+
+### Delete movie
+DELETE http://localhost:8080/admin/movies/4
+
+### Get movie for admin
+GET http://localhost:8080/admin/movies/4
